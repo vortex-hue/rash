@@ -12,7 +12,7 @@ func main() {
 		wg.Add(1)
 		go func(i int) {
 			defer wg.Done()
-			resp, err := http.Get("http://localhost:8080")
+			resp, err := http.Get("http://localhost:8000")
 			if err != nil {
 				fmt.Printf("Error on request %d: %s\n", i, err)
 				return
